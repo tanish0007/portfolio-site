@@ -8,9 +8,14 @@
     font-family: "Titillium Web";
 }
 
+html{
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     background-color: black;
     color: #e7e7e7;
@@ -62,6 +67,7 @@ header {
 }
 .logo-span{
     font-family: "Great Vibes";
+    font-weight: 600;
 }
 .logo:hover {
     text-shadow: 0 0 30px white;
@@ -166,7 +172,7 @@ header nav a:hover::after {
 .tag-box:hover .tag{
     text-shadow: 0 0 20px lightgray;
 }
-.content .domain{
+.domain{
     font-size: 6.5rem;
     font-weight: 600;
     line-height: 1.2;
@@ -255,14 +261,55 @@ header nav a:hover::after {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 390px) {
     .nav{
         display: none;
     }
     .logo{
-        font-size: 2rem;
-    
+        font-size: 1.2rem;
+    }
     header{
-        padding: 0;
+        padding-inline: 30px;
+    }
+    .hire-me{
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        background-color: blueviolet;
+        border-radius: 5px;
+    }
+    .hire-me:hover{
+        background-color: blueviolet;
+    }
+    .robot-3d{
+        transform: scale(0.55);
+        top: -35%;
+        right: -0.5%;
+    }
+    .content{
+        margin-top: 10rem;
+    }
+    .tag-box{
+        width: 12rem;
+        height: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .tag{
+        font-size: .8rem;
+        text-transform: capitalize;
+    }
+    .button{
+        font-size: .8rem;
+    }
+    .cv-button{
+        background-color: white;
+        color: black;
+        i{color: black;}
+    }
+    .short-desc{
+        font-size: .9rem;
+        margin-top: 5px;
+    }
+    .domain{
+        font-size: 3rem;
     }
 }
