@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+:root{
+    --blueviolet: #8a2be2;
+    --blue: #6366f2;
+    --gray: #757575;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -69,7 +75,7 @@ header {
     text-shadow: 0 0 30px white;
 }
 .logo:hover .logo-span{
-    text-shadow: 0 0 30px blueviolet;
+    text-shadow: 0 0 30px var(--blueviolet);
 }
 header nav {
     display: flex;
@@ -91,7 +97,7 @@ header nav a::after {
     left: 50%;
     width: 100%;
     height: 2px;
-    background-color: blueviolet;
+    background-color: var(--blueviolet);
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
     transition: transform 0.4s ease;
@@ -108,14 +114,14 @@ header nav a:hover::after {
     background-color: transparent;
     padding: 10px 20px;
     border-radius: 10px;
-    border: blueviolet 1px solid;
-    box-shadow: 0 0 10px blueviolet;
-    text-shadow: 0 0 10px blueviolet;
+    border: var(--blueviolet) 1px solid;
+    box-shadow: 0 0 10px var(--blueviolet);
+    text-shadow: 0 0 10px var(--blueviolet);
     transition: .3s;
 }
 .hire-me:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px blueviolet;
+    box-shadow: 0 0 30px var(--blueviolet);
     text-shadow: 0 0 20px white;
 }
 /* hero section */
@@ -230,6 +236,287 @@ header nav a:hover::after {
     right: -20%;
 }
 
+/* Contact-Section */
+.contact-section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* remove after sometime */
+}
+.contact-tag{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 30px;
+    border: 0.5px solid #6366f2;
+    width: fit-content;
+    border-radius: 20px;
+    margin: 2rem 0 1rem 0;
+    color: #6366f2;
+    background-color: #6365f238;
+    i{color: #6366f2;}
+}
+.contact-section h1{
+    color: #8a2be2;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: "Great Vibes";
+}
+.contact-section p{
+    width: 40rem;
+    text-align: center;
+    color: rgb(209, 209, 209);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.contact-form fieldset{
+    width: 40rem;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    border: 1px solid var(--gray);
+}
+.contact-form fieldset:hover{
+    border: 1px solid var(--blueviolet);
+    legend{
+        color: var(--blueviolet);
+        text-shadow: 0 0 30px var(--blueviolet);
+    }
+}
+.contact-form .labels{
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.name-box{
+    width: 100%;
+    font-size: .9rem;
+    letter-spacing: .02em;
+}
+.name-box input{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid gray;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+.mail-box{
+    width: 100%;
+    letter-spacing: .02em;
+    font-size: .9rem;
+}
+.mail-box input{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid gray;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.message-box{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .02em;
+    font-size: .9rem;
+}
+.message-box textarea {
+    width: 100%;
+    resize: none;
+    height: 10rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.form-buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.form-buttons button[type="submit"] {
+    background-color: black;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s all;
+    background: linear-gradient(30deg,
+        transparent 20%,
+        var(--blueviolet) 40%,
+        var(--blueviolet) 60%,
+        transparent 80%
+    );
+    /* box-shadow: 0 0 10px blueviolet; */
+}
+.form-buttons button[type="submit"]:hover {
+    box-shadow: 0 0 40px var(--blueviolet);
+}
+.form-buttons button[type="reset"] {
+    background-color: black;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    border: var(--gray) 1px solid;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+
+    i{transition: .5s ease-in-out;}
+}
+.form-buttons button[type="reset"]:hover {
+    box-shadow: 0 0 10px lightgray;
+    background-color: rgba(211, 211, 211, 0.192);
+
+    i{rotate: -360deg;}
+}
+.muted{
+    color: gray;
+}
+.reach-out-buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 10%;
+}
+.reach-out-buttons button {
+    background-color: black;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    letter-spacing: .02em;
+    border: 1px solid var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+    cursor: pointer;
+    transition: .2s;
+
+    i{font-size: 1rem;}
+}
+.reach-out-buttons button:hover {
+    transform: scale(1.02);
+    background-color: var(--blueviolet);
+    border: none;
+    box-shadow: 0 0 20px var(--blueviolet);
+}
+/* footer */
+.footer-section{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+.h-row{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+    to right,
+    transparent 3%,
+    var(--blueviolet) 50%,
+    var(--blue) 75%,
+    transparent 97%
+  );
+}
+.foot{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .social-links {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 20px;
+}
+
+footer .social-links i{
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px lightgray;
+}
+.icon-wrapper {
+      position: relative;
+      cursor: pointer;
+      font-size: 32px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+.icon-wrapper:hover {
+      color: #000;
+      transform: translateY(-5px);
+}
+.icon-wrapper .tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--blueviolet);  
+      color: white;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+}
+
+.icon-wrapper:hover .tooltip {
+      opacity: 1;
+      bottom: 120%;
+}
+footer .goto-top{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    box-shadow: 0 0 10px lightgray;
+}
+
+footer .goto-top .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+        font-size: 1.3rem;
+    }
+}
+footer .goto-top .icon-wrapper:hover .tooltip{
+      bottom: 220%;
+}
+.copyright{
+    letter-spacing: 0.05em;
+}
+
 
 /* Media Queries */
 /* small-laptop responsive */
@@ -293,11 +580,11 @@ header nav a:hover::after {
     .hire-me{
         padding: 5px 10px;
         font-size: 0.7rem;
-        background-color: blueviolet;
+        background-color: var(--blueviolet);
         border-radius: 5px;
     }
     .hire-me:hover{
-        background-color: blueviolet;
+        background-color: var(--blueviolet);
     }
     .robot-3d{
         transform: scale(0.55);
