@@ -1,5 +1,3 @@
 # 🌐 Portfolio Website
 
-## Live Demo
-
-🔗 [Live-Portfolio](https://tanish0007.github.io/portfolio-site/)
+**Live Demo:** : 🔗 [Live-Portfolio](https://tanish0007.github.io/portfolio-site/)
