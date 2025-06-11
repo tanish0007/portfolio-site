@@ -4,7 +4,6 @@
     --blueviolet: #8a2be2;
     --blue: #6366f2;
     --gray: #757575;
-    --cursive: "Great Vibes";
 }
 
 *{
@@ -236,6 +235,55 @@ header nav a:hover::after {
     top: 0;
     right: -20%;
 }
+/* Academics Setion */
+#academics{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.academics-tag {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 30px;
+    border: 0.5px solid #6366f2;
+    width: fit-content;
+    border-radius: 20px;
+    margin: 2rem 0 1rem 0;
+    color: #6366f2;
+    background-color: #6365f238;
+    i{color: #6366f2;}
+}
+#academics h1{
+    color: #8a2be2;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: "Great Vibes";
+}
+.education-info-box{
+    width: 80%;
+    display: flex;
+}
+.education-box{
+    width: 50%;
+    /* remove height next time */
+    height: 100rem;
+    
+}
+.path{
+    width: 5px;
+    height: auto;
+    background: linear-gradient(
+        to bottom,
+        transparent 3%,
+        var(--blueviolet) 30%,
+        var(--blueviolet) 70%,
+        transparent 97%
+    );
+}
 
 /* Contact-Section */
 .contact-section {
@@ -357,7 +405,7 @@ header nav a:hover::after {
     cursor: pointer;
     font-weight: 500;
     transition: .3s all;
-    background: linear-gradient(30deg,
+    background: linear-gradient(145deg,
         transparent 20%,
         var(--blueviolet) 40%,
         var(--blueviolet) 60%,
